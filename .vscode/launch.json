@@ -1,0 +1,126 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "array_probs",
+            "request": "launch",
+            "mainClass": "array_probs",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "LinkedList",
+            "request": "launch",
+            "mainClass": "LinkedList",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "practisce",
+            "request": "launch",
+            "mainClass": "practisce",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Backtracking",
+            "request": "launch",
+            "mainClass": "Backtracking",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "ComplexCalculator",
+            "request": "launch",
+            "mainClass": "ComplexCalculator",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "OOPS",
+            "request": "launch",
+            "mainClass": "OOPS",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "arraycc",
+            "request": "launch",
+            "mainClass": "arraycc",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "basic_calculator",
+            "request": "launch",
+            "mainClass": "basic_calculator",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "bit_manipulation",
+            "request": "launch",
+            "mainClass": "bit_manipulation",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "functiona",
+            "request": "launch",
+            "mainClass": "functiona",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "patterns",
+            "request": "launch",
+            "mainClass": "patterns",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "prime",
+            "request": "launch",
+            "mainClass": "prime",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "recurrsion",
+            "request": "launch",
+            "mainClass": "recurrsion",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "sstrring",
+            "request": "launch",
+            "mainClass": "sstrring",
+            "projectName": "java_84e679b1"
+        },
+        {
+            "type": "java",
+            "name": "twod_array",
+            "request": "launch",
+            "mainClass": "twod_array",
+            "projectName": "java_84e679b1"
+        }
+    ]
+}
