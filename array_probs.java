@@ -126,4 +126,48 @@ public class array_probs { // PROBLEM 1
         return uniqueResult;
     }
 
+    public static int findMaxSum(int ar[]) {
+        int n = ar.length;
+        int MaxSum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int x = Integer.MAX_VALUE;
+                int y = Integer.MAX_VALUE;
+
+                for (int k = i; k <= j; k++) {
+                    if (ar[k] < x) {
+                        y = x;
+                        x = ar[k];
+                    } else if (ar[k] < y) {
+                        y = ar[k];
+                    }
+                }
+                int sum = x + y;
+                MaxSum = Math.max(MaxSum, sum);
+            }
+        }
+        return MaxSum;
+    }
+
+    public static int maxProfit(int arr[]) {
+        int maxprofit = 0;
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                int profit = arr[i] - arr[j];
+                if (profit < 0) {
+                    profit = 0;
+                }
+                maxprofit = Math.max(profit, maxprofit);
+            }
+        }
+        return maxprofit;
+    }
+
+    public static void main(String[] args) {
+        int ar[] = { 7, 1, 5, 3, 6, 4 };
+        System.out.println(maxProfit(ar));
+        ; // Output should be 11
+    }
 }

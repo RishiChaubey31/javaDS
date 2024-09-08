@@ -413,11 +413,51 @@ public class arraycc { // linear search
         return maxLength;
     }
 
+    public static int LongestConsecutive(int nums[]) {
+        int maxL = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int l = nums[i] + 1;
+            int c = 1;
+            for (int j = 0; j < nums.length; j++) {
+                if (l == nums[j]) {
+                    c += 1;
+                    l += 1;
+                    j = -1;
+
+                }
+            }
+
+            maxL = Math.max(c, maxL);
+        }
+        return maxL;
+    }
+
+    public static int subarraySum(int[] nums, int k) {
+        int n = nums.length;
+
+        int c = 0;
+        for (int i = 0; i < n; i++) {
+
+            int start = i;
+            for (int j = i; j < n; j++) {
+                int end = j;
+                int sum = 0;
+                for (int l = start; l <= end; l++) {
+                    // System.out.println(nums[l]);
+                    sum = sum + nums[l];
+                }
+                if (sum == k) {
+                    c += 1;
+                }
+            }
+        }
+        return c;
+    }
+
     public static void main(String[] args) {
-        int[] arr = { -1, 2, 3 };
-        int k = 6;
-        int result = longestSubarrayWithSumK(arr, k);
-        System.out.println("Length of the longest sub-array is: " + result);
+        int[] arr = { 1, 1, 1 };
+        int k = 2;
+        System.out.println(subarraySum(arr, k));
     }
 
 }

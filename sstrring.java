@@ -178,9 +178,32 @@ public class sstrring {
         return true;
     }
 
+    public static int getLucky(String s, int k) {
+        StringBuilder s2 = new StringBuilder();
+        for (char ch : s.toCharArray()) {
+            int newValue = ch - 'a' + 1;
+            s2.append(newValue);
+        }
+        String s3 = s2.toString();
+
+        long n = Long.parseLong(s3);
+
+        for (int i = 0; i < k; i++) {
+            long sum = 0;
+            while (n != 0) {
+                long r = n % 10;
+                sum = sum + r;
+                n = n / 10;
+
+            }
+            n = sum;
+        }
+        return (int) n;
+    }
+
     public static void main(String args[]) {
-        String str1 = "aabbcc";
-        String str2 = "abcdef";
-        System.out.println(ana2(str1, str2));
+        String s = "leetcode";
+        int k = 2;
+        System.out.println(getLucky(s, k));
     }
 }
