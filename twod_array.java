@@ -1,70 +1,80 @@
 import java.util.*;
-/*public static spiral(int matrix[][]){
-    int startrow=0;
-    int startcol=0;
-    int endrow=matrix.length-1;
-    int endcol=matrix[0].length-1;
-
-while(startrow <= endrow && startcol<= endcol){
-    // top
-    for(  int j=startcol;j<=endcol;j++){
-        System.out.print(matrix[startrow][j]+" ");
-    }
-}
-} */
 
 public class twod_array {
-    public static void largest_smallest(int[][] matrix) { // largest and samllest in matrix
-        int largest = Integer.MIN_VALUE;
-        int smallest = Integer.MAX_VALUE;
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                if (largest < matrix[i][j]) {
-                    largest = matrix[i][j];
-                }
-                if (smallest > matrix[i][j]) {
-                    smallest = matrix[i][j];
-                }
-            }
-        }
-        System.out.println(largest);
-        System.out.println(smallest);
-
-    }
-
-    public static boolean search(int matrix[][], int key) { // search for any elemnt in matrix
-        for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < matrix[0].length; j++) {
-                if (matrix[i][j] == key) {
-                    System.out.println("found at cell (" + i + "," + j + ")");
+    public static boolean search(int[][] nums, int k) {
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = 0; j < nums[0].length; j++) {
+                if (nums[i][j] == k) {
+                    System.out.println("element found at " + i + " " + j);
                     return true;
                 }
+
             }
 
         }
-        System.out.println("key not found");
         return false;
     }
 
-    public static void main(String args[]) {
-        int matrix[][] = new int[3][3];
-        int n = matrix.length, m = matrix[0].length;
-        Scanner sc = new Scanner(System.in);
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                matrix[i][j] = sc.nextInt();
+    public static void Spiral(int[][] matrix) {
+        int StartRow = 0;
+        int EndRow = matrix.length - 1;
+        int StartColumn = 0;
+        int EndColumn = matrix[0].length - 1;
+        while (StartRow <= EndRow && StartColumn <= EndColumn) {
 
+            for (int j = StartColumn; j <= EndColumn; j++) {
+                System.out.print(matrix[StartRow][j] + " ");
             }
-        }
-        sc.close();
-        // output
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                System.out.print(matrix[i][j] + " ");
+            for (int i = StartRow + 1; i <= EndRow; i++) {
+                System.out.print(matrix[i][EndColumn] + " ");
             }
-            System.out.println();
+            for (int j = EndColumn - 1; j >= StartColumn; j--) {
+                if (StartRow == EndRow) {
+                    break;
+                }
+                System.out.print(matrix[EndRow][j] + " ");
+            }
+            for (int i = EndRow - 1; i >= StartRow + 1; i--) {
+                if (StartColumn == EndColumn) {
+                    break;
+                }
+                System.out.print(matrix[i][StartColumn] + " ");
+            }
+            StartColumn++;
+            StartRow++;
+            EndColumn--;
+            EndRow--;
         }
-        largest_smallest(matrix);
-
+        System.out.println();
     }
+
+    public static void main(String[] args) {
+        int[][] matrix = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+        Spiral(matrix);
+    }
+
+    // public static void main(String[] args) {
+    // int nums[][] = new int[3][3];
+    // int n = nums.length, m = nums[0].length;
+    // Scanner sc = new Scanner(System.in);
+
+    // for (int i = 0; i < n; i++) {
+    // for (int j = 0; j < m; j++) {
+    // nums[i][j] = sc.nextInt();
+
+    // }
+    // }
+    // sc.close();
+    // for (int i = 0; i < n; i++) {
+    // for (int j = 0; j < m; j++) {
+    // System.out.print(nums[i][j] + " ");
+
+    // }
+    // System.out.println();
+    // }
+
+    // int k = 7;
+    // System.out.println(search(nums, k));
+
+    // }
 }
